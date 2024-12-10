@@ -16,6 +16,9 @@ class Articulos(models.Model):
     descripcion=models.CharField(max_length=20)
     precio=models.IntegerField()
 
+    def __str__(self):
+        return f"Nombre: {self.nombre}, descripcion: {self.descripcion}, precio: {self.precio}"
+
 class Pedido(models.Model):
 
     numero=models.IntegerField()
